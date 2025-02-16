@@ -19,13 +19,9 @@ const CouponInput: React.FC<CouponInputProps> = ({ onApply }) => {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
       
-      // In a real implementation, validate the coupon code with your backend
-      if (code.toLowerCase() === "discount50") {
-        onApply(code);
-        toast.success("Coupon applied successfully!");
-      } else {
-        toast.error("Invalid coupon code");
-      }
+      // For demo purposes, accept any code
+      onApply(code);
+      toast.success("Coupon applied successfully! (20% discount)");
     } finally {
       setIsLoading(false);
     }
@@ -37,7 +33,7 @@ const CouponInput: React.FC<CouponInputProps> = ({ onApply }) => {
         type="text"
         value={code}
         onChange={(e) => setCode(e.target.value)}
-        placeholder="Enter coupon code"
+        placeholder="Enter any code for demo"
         className="flex-1 px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
       />
       <button

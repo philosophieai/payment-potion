@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import PricingCard from "../components/PricingCard";
 import CouponInput from "../components/CouponInput";
@@ -101,8 +100,9 @@ const Index = () => {
   };
 
   const calculateDiscountedPrice = (price: number) => {
-    if (couponCode?.toLowerCase() === "discount50") {
-      return price * 0.5;
+    if (couponCode) {
+      // Apply 20% discount for any coupon code (demo purposes)
+      return price * 0.8;
     }
     return price;
   };
@@ -224,7 +224,7 @@ const Index = () => {
                 <div className="mb-8 p-4 bg-primary/5 rounded-lg">
                   <div className="flex justify-between items-center">
                     <span className="text-primary font-medium">Discount applied</span>
-                    <span className="text-primary font-medium">-50%</span>
+                    <span className="text-primary font-medium">-20%</span>
                   </div>
                 </div>
               )}
