@@ -29,14 +29,14 @@ const PricingCard: React.FC<PricingCardProps> = ({
     <div
       className={`relative p-6 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] ${
         isPopular
-          ? "bg-white/90 shadow-lg border-2 border-[#0A2540]"
+          ? "bg-white/90 shadow-lg border-2 border-[#1EAEDB]"
           : isEnterprise
           ? "bg-gradient-to-b from-gray-900 to-gray-800 text-white border border-gray-700"
           : "bg-white/80 border border-gray-200"
       }`}
     >
       {isPopular && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#0A2540] rounded-full text-white text-sm font-medium animate-fadeIn">
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#1EAEDB] rounded-full text-white text-sm font-medium animate-fadeIn">
           Most Popular
         </div>
       )}
@@ -67,7 +67,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
       <ul className="space-y-3 mb-6">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-2">
-            <Check className={`w-5 h-5 mt-0.5 ${isEnterprise ? 'text-primary-foreground' : 'text-[#0A2540]'}`} />
+            <Check className={`w-5 h-5 mt-0.5 ${isEnterprise ? 'text-primary-foreground' : 'text-[#1EAEDB]'}`} />
             <span className={isEnterprise ? 'text-gray-300' : 'text-gray-600'}>{feature}</span>
           </li>
         ))}
@@ -77,7 +77,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         onClick={onSelect}
         className={`w-full py-3 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 ${
           isPopular
-            ? "bg-[#0A2540] text-white hover:bg-[#0A2540]/90"
+            ? "bg-[#1EAEDB] text-white hover:bg-[#1EAEDB]/90"
             : isEnterprise
             ? "bg-white text-gray-900 hover:bg-gray-100"
             : "bg-gray-100 text-gray-800 hover:bg-gray-200"
