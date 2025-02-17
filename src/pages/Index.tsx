@@ -139,13 +139,13 @@ const Index = () => {
             core features with different levels of access and support.
           </p>
           <div className="flex items-center justify-center gap-3 mb-8">
-            <span className={`text-sm ${!yearlyBilling ? 'font-semibold text-primary' : 'text-gray-600'}`}>
+            <span className={`text-sm ${!yearlyBilling ? 'font-semibold text-[#0A2540]' : 'text-gray-600'}`}>
               Monthly
             </span>
             <button
               onClick={() => setYearlyBilling(!yearlyBilling)}
               className={`relative w-14 h-7 rounded-full transition-colors duration-300 ${
-                yearlyBilling ? 'bg-primary' : 'bg-gray-300'
+                yearlyBilling ? 'bg-[#0A2540]' : 'bg-gray-300'
               }`}
             >
               <span
@@ -154,7 +154,7 @@ const Index = () => {
                 }`}
               />
             </button>
-            <span className={`text-sm ${yearlyBilling ? 'font-semibold text-primary' : 'text-gray-600'}`}>
+            <span className={`text-sm ${yearlyBilling ? 'font-semibold text-[#0A2540]' : 'text-gray-600'}`}>
               Yearly
               <span className="ml-1 text-xs text-green-500 font-medium">
                 (Save up to 17%)
@@ -222,10 +222,10 @@ const Index = () => {
               </div>
 
               {couponCode && (
-                <div className="mb-8 p-4 bg-[#0EA5E9]/5 rounded-lg">
+                <div className="mb-8 p-4 bg-[#0A2540]/5 rounded-lg">
                   <div className="flex justify-between items-center">
-                    <span className="text-[#0EA5E9] font-medium">Discount applied</span>
-                    <span className="text-[#0EA5E9] font-medium">-20%</span>
+                    <span className="text-[#0A2540] font-medium">Discount applied</span>
+                    <span className="text-[#0A2540] font-medium">-20%</span>
                   </div>
                 </div>
               )}
@@ -249,7 +249,7 @@ const Index = () => {
 
               <button
                 onClick={handleCheckout}
-                className="w-full py-4 bg-[#0EA5E9] text-white rounded-xl hover:bg-[#0EA5E9]/90 transition-all font-medium"
+                className="w-full py-4 bg-[#0A2540] text-white rounded-xl hover:bg-[#0A2540]/90 transition-all font-medium"
               >
                 Proceed to Payment
               </button>
