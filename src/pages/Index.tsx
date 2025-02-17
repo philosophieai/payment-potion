@@ -233,12 +233,9 @@ const Index = () => {
               <div className="border-t border-gray-200 pt-4 mb-8">
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-medium">Total</span>
-                  <div className="text-right flex items-baseline gap-2">
+                  <div className="text-right">
                     <span className="text-2xl font-bold">
                       ${calculateDiscountedPrice(getPlanPrice(selectedPlan) || 0)}
-                    </span>
-                    <span className="text-gray-600 text-sm">
-                      {yearlyBilling ? "per year" : "per month"}
                     </span>
                   </div>
                 </div>
