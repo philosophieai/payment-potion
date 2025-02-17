@@ -323,7 +323,7 @@ const Index = () => {
                     onClick={handleCheckout}
                     className="w-full py-4 bg-[#1EAEDB] text-white rounded-xl hover:bg-[#1EAEDB]/90 transition-all font-medium mt-6"
                   >
-                    Pay ${calculateDiscountedPrice(getPlanPrice(selectedPlan) || 0)}
+                    Pay
                   </button>
 
                   <p className="text-center text-sm text-gray-600 mt-4">
