@@ -193,9 +193,10 @@ const Index = () => {
                 <div className="flex justify-between items-center pb-4 border-b border-gray-100">
                   <div>
                     <h4 className="font-medium">{selectedPlan.name} Plan</h4>
-                    <p className="text-sm text-gray-600">
-                      Billed {yearlyBilling ? "yearly" : "monthly"}
-                    </p>
+                    <div className="text-sm text-gray-600">
+                      <p>Billed {yearlyBilling ? "yearly" : "monthly"}</p>
+                      <p className="text-xs mt-0.5">Can cancel anytime</p>
+                    </div>
                   </div>
                   <div className="text-right">
                     <span className="text-lg font-semibold">
@@ -221,10 +222,10 @@ const Index = () => {
               </div>
 
               {couponCode && (
-                <div className="mb-8 p-4 bg-primary/5 rounded-lg">
+                <div className="mb-8 p-4 bg-[#0EA5E9]/5 rounded-lg">
                   <div className="flex justify-between items-center">
-                    <span className="text-primary font-medium">Discount applied</span>
-                    <span className="text-primary font-medium">-20%</span>
+                    <span className="text-[#0EA5E9] font-medium">Discount applied</span>
+                    <span className="text-[#0EA5E9] font-medium">-20%</span>
                   </div>
                 </div>
               )}
@@ -248,7 +249,7 @@ const Index = () => {
 
               <button
                 onClick={handleCheckout}
-                className="w-full py-4 bg-primary text-white rounded-xl hover:bg-primary/90 transition-all font-medium"
+                className="w-full py-4 bg-[#0EA5E9] text-white rounded-xl hover:bg-[#0EA5E9]/90 transition-all font-medium"
               >
                 Proceed to Payment
               </button>
